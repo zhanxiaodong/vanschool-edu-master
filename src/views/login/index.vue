@@ -21,7 +21,7 @@
       >
         <el-form-item
           prop="user"
-          :rules="[{ required: true, message: '请输入用户名或手机号码', trigger: 'blur' }]"
+          :rules="[{ required: true, message:  '请输入用户名或手机号码', trigger: 'blur' }]"
         >
           <el-input
             v-model="loginForm.user"
