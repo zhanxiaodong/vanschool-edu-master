@@ -33,6 +33,7 @@
       </el-row>
       <div class="table-container">
         <el-table
+          fit='false'
           :data="list"
           @selection-change="onSelectRows"
         >
@@ -152,7 +153,7 @@
       :visible.sync="transferDialogVisible"
       title="更换校区"
     >
-      <el-form label-width="6em">
+      <el-form label-width="6em"> 
         <el-form-item label="已选学生：">
           <el-tag
             class="students-tag"

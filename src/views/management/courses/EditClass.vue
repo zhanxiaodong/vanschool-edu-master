@@ -216,7 +216,7 @@ export default {
         page: 1,
         limit: 20
       },
-      dialogVisible: false,
+      dialogVisible: true,
       isEdit: false
     };
   },

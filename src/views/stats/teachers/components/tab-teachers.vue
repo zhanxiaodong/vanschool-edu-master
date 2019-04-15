@@ -97,7 +97,64 @@ export default {
     };
   },
   methods: {
-    onSearch() {}
+    //翻页和搜索都有问题，需要掉接口！！！
+    // 搜索
+    onSearch(payload) {
+      let queryData = { ...payload.form }
+      let startDate = ''
+      let endDate = ''
+      if (queryData.daterange) {
+        startDate = this.$root.formatDate.toSec(queryData.daterange[0])
+        endDate = this.$root.formatDate.toSec(queryData.daterange[1])
+      }
+      delete queryData['daterange']
+      queryData = Object.keys(queryData)
+        .map(key => ({
+          coloumName: key,
+          coloumValue: queryData[key]
+        }))
+        .filter(item => item.coloumValue)
+      this.queryKeysData = {
+        type: 2,
+        startDate,
+        endDate,
+        result: 0,
+        properties: queryData
+      }
+      this.searchFetch()
+    },
+    // 翻页
+    getList({ page, limit }) {
+      if (
+        this.queryKeysData.properties &&
+        this.queryKeysData.properties.length > 0
+      ) {
+        // 有查询条件的翻页
+        this.searchFetch({
+          page,
+          pageSize: limit
+        })
+      } else {
+        // 无条件的翻页
+        this.getTableData({ page, pageSize: limit })
+      }
+    },
+    // 搜索查询
+    searchFetch({ page, pageSize } = { page: 1, pageSize: 20 }) {
+      this.$root
+        .http({
+          url: `/client/querys`,
+          method: 'POST',
+          data: { ...this.queryKeysData, page, pageSize }
+        })
+        .then(res => {
+          this.tableData = this.formatTableData(res.result)
+          this.total = res.totalNum
+        })
+        .catch(err => {
+          window.console.error(err)
+        })
+    },
   }
 };
 </script>

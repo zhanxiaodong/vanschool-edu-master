@@ -10,8 +10,8 @@ import managementRouter from './modules/management'
 import classesRouter from './modules/classes'
 import teachersRouter from './modules/teachers'
 import basicsRouter from './modules/basics';
-import entryTaskRouter from './modules/entryTask';
-import taskConfRouter from './modules/taskConf';
+// import entryTaskRouter from './modules/entryTask';
+// import taskConfRouter from './modules/taskConf';
 import presortCampusRouter from './modules/presortCampus';
 
 import Layout from '@/views/layout/Layout';
@@ -36,8 +36,8 @@ export const authRouterMap = [{
   classesRouter,
   teachersRouter,
   basicsRouter,
-  entryTaskRouter,
-  taskConfRouter,
+  // entryTaskRouter,
+  // taskConfRouter,
 ];
 
 export const constantRouterMap = [{

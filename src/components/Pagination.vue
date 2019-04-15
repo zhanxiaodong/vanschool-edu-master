@@ -75,11 +75,22 @@ export default {
     }
   },
   methods: {
+    //crm系统有样式！！！
     handleSizeChange(val) {
       this.$emit("pagination", { page: this.currentPage, pageSize: val });
+      this.scrollContainerTop()
     },
     handleCurrentChange(val) {
       this.$emit("pagination", { page: val, pageSize: this.pageSize });
+      this.scrollContainerTop()
+    },
+    scrollContainerTop() {
+      if (this.autoScroll) {
+        const tableScrollingNode = document.querySelector(
+          '.el-table__body-wrapper'
+        )
+        tableScrollingNode && tableScrollingNode.scrollTo(0, 0)
+      }
     }
   }
 };

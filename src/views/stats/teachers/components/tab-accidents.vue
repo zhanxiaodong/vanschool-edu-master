@@ -28,6 +28,7 @@
           </template>
         </el-table-column>
       </el-table>
+      <!--分页-->
       <div class="table-container-footer">
         <pagination
           v-show="total"

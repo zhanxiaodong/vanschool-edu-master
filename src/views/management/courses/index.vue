@@ -38,6 +38,11 @@
       >
         <el-table :data="listData">
           <el-table-column
+           type="index"
+           label="序号"
+            width="50">
+          </el-table-column>
+          <el-table-column
             prop="name"
             label="班级名称"
             align="center"
@@ -80,7 +85,7 @@
           />>
           <!-- <template slot-scope="scope">{{  }}</template>
           </el-table-column>-->
-          <!-- <el-table-column prop="status" label="状态" align="center"/> -->
+          
           <el-table-column
             label="操作"
             width="100"
@@ -97,6 +102,7 @@
               >排课</el-button>
             </template>
           </el-table-column>
+          <el-table-column prop="status" label="状态" align="center"/>
         </el-table>
         <div class="table-container-footer">
           <pagination

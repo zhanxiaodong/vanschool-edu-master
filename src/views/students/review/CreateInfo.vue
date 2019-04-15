@@ -54,7 +54,7 @@
               </el-select>
             </el-form-item>
           </el-col>
-          <el-col :span="12">
+          <!-- <el-col :span="12">
             <el-form-item label="学届：">
               <el-select v-model="formData.studentClass.grade">
                 <el-option
@@ -65,7 +65,7 @@
                 />
               </el-select>
             </el-form-item>
-          </el-col>
+          </el-col> -->
           <el-col :span="12">
             <el-form-item label="学期：">
               <el-select v-model="formData.studentClass.tern">
@@ -132,7 +132,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="户籍：">
+            <el-form-item label="户籍地址：">
               <el-input v-model="formData.studentInfo.census" />
               <!-- <el-cascader
                 :options="provinceCityList"
@@ -250,7 +250,7 @@
             <el-form-item :label="`${formData.studentRelatives[0].relative}姓名：`">
               <el-input
                 v-model="formData.studentRelatives[0].name"
-                placeholder=""
+                placeholder="请输入姓名"
               />
             </el-form-item>
           </el-col>
@@ -258,7 +258,7 @@
             <el-form-item :label="`${formData.studentRelatives[0].relative}电话：`">
               <el-input
                 v-model="formData.studentRelatives[0].relativePhone"
-                placeholder=""
+                placeholder="请输入号码"
               />
             </el-form-item>
           </el-col>
@@ -266,7 +266,7 @@
             <el-form-item :label="`${formData.studentRelatives[0].relative}职业：`">
               <el-input
                 v-model="formData.studentRelatives[0].career"
-                placeholder=""
+                placeholder="请输入职业"
               />
             </el-form-item>
           </el-col>
@@ -274,7 +274,7 @@
             <el-form-item :label="`${formData.studentRelatives[1].relative}姓名：`">
               <el-input
                 v-model="formData.studentRelatives[1].name"
-                placeholder=""
+                placeholder="请输入姓名"
               />
             </el-form-item>
           </el-col>
@@ -282,7 +282,7 @@
             <el-form-item :label="`${formData.studentRelatives[1].relative}电话：`">
               <el-input
                 v-model="formData.studentRelatives[1].relativePhone"
-                placeholder=""
+                placeholder="请输入号码"
               />
             </el-form-item>
           </el-col>
@@ -290,7 +290,7 @@
             <el-form-item :label="`${formData.studentRelatives[1].relative}职业：`">
               <el-input
                 v-model="formData.studentRelatives[1].career"
-                placeholder=""
+                placeholder="请输入职业"
               />
             </el-form-item>
           </el-col>
@@ -298,7 +298,7 @@
             <el-form-item label="家庭住址：">
               <el-input
                 v-model="formData.studentInfo.homeAddress"
-                placeholder=""
+                placeholder="请输入家庭住址"
               />
             </el-form-item>
           </el-col>
@@ -615,11 +615,13 @@
           :gutter="32"
         >
           <el-col style="text-align:right">
-            <el-button type="danger">不通过</el-button>
+            <!-- <el-button type="danger">不通过</el-button>
             <el-button
               type="primary"
               @click="handleSubmit"
-            >通过</el-button>
+            >通过</el-button> -->
+          <el-button type="primary" @click="onSubmit">提交</el-button>
+          <el-button>取消</el-button>
           </el-col>
         </el-row>
       </el-card>

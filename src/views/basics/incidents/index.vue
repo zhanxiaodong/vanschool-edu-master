@@ -74,7 +74,7 @@
       :visible.sync="dialogVisible"
       title="编辑事故规则"
     >
-      <el-form label-width="6em">
+      <el-form label-width="6em ">
         <el-row :gutter="24">
           <el-col :span="24">
             <el-form-item label="事故分类：">
@@ -99,7 +99,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="扣分：">
+            <el-form-item label="排序：">
               <el-input v-model="dialogForm.deduct"></el-input>
             </el-form-item>
           </el-col>
@@ -126,7 +126,7 @@ export default {
     return {
       loading: false,
       listData: [],
-      dialogVisible: false,
+      dialogVisible: true,
       dialogForm: {
         rule: "",
         ruleDetail: "",

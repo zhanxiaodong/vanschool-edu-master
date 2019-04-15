@@ -72,7 +72,9 @@ const managementRouter = {
     meta: {
       title: 'VIP课课消管理'
     }
-  }, {
+  }, 
+  //考务安排
+  {
     path: 'exams',
     component: RouterView,
     meta: {
@@ -130,8 +132,26 @@ const managementRouter = {
     component: () => import('@/views/management/closed/index'),
     meta: {
       title: '结课纪录'
-    }
-  }]
+    }, 
+  }, 
+  //任务模版录入
+  {
+    path: 'entryTask',
+    component: () => import('@/views/management/entryTask/MainTask'),
+    meta: {
+      title: '任务模版录入'
+    },
+  },
+  
+  //任务状态管理
+  {
+    path: 'taskConf',
+    component: () => import('@/views/management/taskConf/TaskConfIndex'),
+    meta: {
+      title: '任务状态管理'
+    },
+  },
+]
 }
 
 export default managementRouter

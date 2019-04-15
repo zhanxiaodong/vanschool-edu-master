@@ -64,20 +64,20 @@
               placeholder="起始时间"
               v-model="formData.courseStar"
               :picker-options="{
-              start: '00:00',
-              step: '00:01',
-              end: '23:59'
+              start: '07:30',
+              step: '00:15',
+              end: '22:30'
             }"
             >
             </el-time-select>
             <span>至</span>
             <el-time-select
-              placeholder="起始时间"
+              placeholder="结束时间"
               v-model="formData.courseEnd"
               :picker-options="{
-              start: '00:00',
-              step: '00:01',
-              end: '23:59'
+              start: '07:30',
+              step: '00:15',
+              end: '22:30'
             }"
             >
             </el-time-select>
@@ -109,7 +109,7 @@ export default {
   name: "BasicsSchedules",
   data() {
     return {
-      dialogVisible: false,
+      dialogVisible: true,
       formData: {
         course: "",
         courseStar: "",

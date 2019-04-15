@@ -139,6 +139,7 @@ export default {
           type: "input",
           col: { md: 8, lg: 6, xl: 6 }
         },
+        semester: { label: "学  期", type: "input", col: { md: 8, lg: 6, xl: 6 } },
         name: { label: "姓  名", type: "input", col: { md: 8, lg: 6, xl: 6 } },
         gender: {
           label: "性  别",

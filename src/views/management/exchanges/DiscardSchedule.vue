@@ -68,7 +68,7 @@
       />
     </el-table>
     <el-dialog
-      title="换课"
+      title="弃课"
       :visible.sync="dialogVisible"
       width="640px"
     >

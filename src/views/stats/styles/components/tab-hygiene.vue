@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       searchFormData: {
-        date: { label: "选择日期", type: "date",col:18 }
+        date: { label: "时间段", type: "daterange", col: 18 }
       },
       listQuery: {
         page: 1,
