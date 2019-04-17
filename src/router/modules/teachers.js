@@ -50,7 +50,15 @@ const teachersRouter = {
     meta: {
       title: '教学事故'
     }
-  }]
+  },
+  //任务状态管理
+  {
+    path: 'taskConf',
+    component: () => import('@/views/teachers/taskConf/TaskConfIndex'),
+    meta: {
+      title: '任务状态管理'
+    },
+  },]
 }
 
 export default teachersRouter

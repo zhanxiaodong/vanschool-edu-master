@@ -142,15 +142,6 @@ const managementRouter = {
       title: '任务模版录入'
     },
   },
-  
-  //任务状态管理
-  {
-    path: 'taskConf',
-    component: () => import('@/views/management/taskConf/TaskConfIndex'),
-    meta: {
-      title: '任务状态管理'
-    },
-  },
 ]
 }
 

@@ -17,11 +17,11 @@
       <el-table :data="list">
         <el-table-column prop="name" label="姓名" align="center" width="120"/>
         <el-table-column prop="gender" label="性别" align="center" width="100"/>
-        <el-table-column prop="mobile" label="联系电话" align="center"/>
         <el-table-column prop="group" label="分组" align="center" min-width="80"/>
-        <el-table-column label="科目" align="center">
+        <el-table-column label="科学" align="center">
           <template slot-scope="scope">{{ scope.row.subjects.join('、') }}</template>
         </el-table-column>
+        <el-table-column prop="mobile" label="联系电话" align="center"/>
         <el-table-column label="负责班级" align="center">
           <template slot-scope="scope">{{ scope.row.classes.join('、') }}</template>
         </el-table-column>
@@ -60,6 +60,12 @@ export default {
     return {
       searchForm: {
         name: { type: "input", label: "姓 名", col: { md: 7, lg: 5, xl: 5 } },
+         grade: {
+          type: "select",
+          label: "负责班级",
+          options: [],
+          col: { md: 7, lg: 5, xl: 5 }
+        },
         status: {
           type: "select",
           label: "状态",
@@ -67,12 +73,6 @@ export default {
             label: teacherStatusMap[key],
             value: key
           })),
-          col: { md: 7, lg: 5, xl: 5 }
-        },
-        grade: {
-          type: "select",
-          label: "负责班级",
-          options: [],
           col: { md: 7, lg: 5, xl: 5 }
         }
       },

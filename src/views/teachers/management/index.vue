@@ -28,7 +28,7 @@
       </el-row>
       <div v-loading="loading" class="table-container">
         <el-table :data="list">
-          <el-table-column
+          <!-- <el-table-column
             width="120"
             label="头像"
             align="center"
@@ -38,7 +38,7 @@
                 <img :src="scope.row.avatarUrl">
               </div>
             </template>
-          </el-table-column>
+          </el-table-column> -->
           <el-table-column
             prop="name"
             label="姓名"
@@ -68,7 +68,7 @@
               {{ scope.row.classes.join('、') }}
             </template>
           </el-table-column>
-          <!-- <el-table-column
+          <el-table-column
             prop="mainHours"
             label="主课时"
             align="center"
@@ -117,7 +117,7 @@
             prop="offRecords"
             label="当月未录"
             align="center"
-          /> -->
+          />
           <el-table-column
             label="操作"
             width="100"
@@ -174,12 +174,12 @@ export default {
   data() {
     return {
       searchForm: {
-        name: { label: "姓 名", type: "input", col: { md: 6, lg: 5, xl: 5 } },
+        name: { label: "姓名", type: "input", col: { md: 5, lg: 5, xl: 5 } },
         class: {
-          label: "班级",
+          label: "负责班级",
           type: "select",
           options: [],
-          col: { md: 6, lg: 5, xl: 5 }
+          col: { md: 7, lg: 5, xl: 5 }
         },
         dates: {
           label: "时间",

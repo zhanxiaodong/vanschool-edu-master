@@ -9,12 +9,12 @@
       <el-row :gutter="24">
         <el-col :span="12">
           <el-form-item label="姓 名：">
-            <el-input v-model="dialogForm.name" />
+            <el-input v-model="dialogForm.name"  placeholder="请输入姓名"/>
           </el-form-item>
         </el-col>
         <el-col :span="12">
           <el-form-item label="手机号：">
-            <el-input v-model="dialogForm.phone" />
+            <el-input v-model="dialogForm.phone" placeholder="请输入号码"/>
           </el-form-item>
         </el-col>
         <el-col :span="12">
@@ -33,7 +33,7 @@
         </el-col>
         <el-col :span="12">
           <el-form-item label="邮 箱：">
-            <el-input v-model="dialogForm.email" />
+            <el-input v-model="dialogForm.email" placeholder="请输入邮箱"/>
           </el-form-item>
         </el-col>
         <el-col :span="12">

@@ -159,7 +159,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="老师：">
+            <el-form-item label="代课老师：">
               <el-select
                 v-model="substituteForm.teacher"
                 placeholder="选择代课老师"
@@ -167,7 +167,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="理由：">
+            <el-form-item label="代课理由：">
               <el-input
                 v-model="substituteForm.reason"
                 type="textarea"
@@ -182,6 +182,7 @@
         slot="footer"
         class="dialog-footer"
       >
+        <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button
           type="primary"
           icon="el-icon-check"
@@ -210,7 +211,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="老师：">
+            <el-form-item label="换课老师：">
               <el-select v-model="replaceForm.teacher" placeholder="请选择换课老师"/>
             </el-form-item>
           </el-col>
@@ -228,7 +229,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="理由：">
+            <el-form-item label="换课理由：">
               <el-input
                 v-model="replaceForm.reason"
                 type="textarea"
@@ -243,6 +244,7 @@
         slot="footer"
         class="dialog-footer"
       >
+        <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button
           type="primary"
           icon="el-icon-check"

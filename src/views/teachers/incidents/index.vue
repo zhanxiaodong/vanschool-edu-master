@@ -23,7 +23,7 @@
         <el-table :data="listData">
           <el-table-column
             prop="dateTime"
-            label="时间"
+            label="发生时间"
             align="center"
             min-width="100"
           >

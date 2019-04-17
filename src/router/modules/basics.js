@@ -94,7 +94,15 @@ const basicsRouter = {
     meta: {
       title: '学科管理'
     }
-  }]
+  }, {
+    path: 'dictionary',
+    name: 'basicsDictionary',
+    component: () => import('@/views/basics/dictionary'),
+    meta: {
+      title: '字典'
+    }
+  }
+]
 }
 
 export default basicsRouter
